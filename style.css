@@ -1,0 +1,312 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+    font-family: 'Inter', sans-serif, Arial;
+    background-color: #0f1115;
+    color: #ffffff;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(18, 22, 31, 0.95);
+    backdrop-filter: blur(8px);
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.brand-text {
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 18px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #a0a5b5;
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #00f0ff;
+}
+
+.home {
+    height: calc(100vh - 80px);
+    width: 100%;
+    background-image: url('shoe-main.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.home-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(15, 17, 21, 0.95) 0%, rgba(15, 17, 21, 0.4) 100%);
+}
+
+.trending {
+    position: relative;
+    z-index: 2;
+    padding-left: 60px;
+    max-width: 700px;
+}
+
+.badge {
+    color: #00f0ff;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.trending h1 {
+    font-size: 48px;
+    line-height: 1.1;
+    font-weight: 800;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+}
+
+.trending p {
+    color: #a0a5b5;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.overview {
+    background-color: #0f1115;
+    width: 100%;
+    height: calc(100vh - 80px);
+    scroll-margin-top: 80px;
+    padding: 30px;
+    overflow: hidden;
+}
+
+.overview .secondContent {
+    display: flex;
+    gap: 25px;
+    height: 100%;
+}
+.overview .secondContent .mainOverview {
+    width: 45%;
+    height: 100%;
+    background-color: #171b24;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.mainOverview .featuredImgContainer {
+    width: 100%;
+    height: 65%;
+    background-color: #000;
+    overflow: hidden;
+}
+
+.mainOverview img.pic1 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease;
+}
+
+.mainOverview:hover img.pic1 {
+    transform: scale(1.03);
+}
+
+.featuredDetails {
+    padding: 25px;
+    background-color: #171b24;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.featuredDetails .tag {
+    color: #00f0ff;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+}
+
+.featuredDetails h1 {
+    font-size: 26px;
+    margin: 8px 0;
+    color: #fff;
+}
+
+.featuredDetails p {
+    color: #a0a5b5;
+    font-size: 14px;
+    line-height: 1.5;
+}
+.overview .secondContent .cardContainer {
+    width: 55%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.cardContainer .card {
+    background-color: #171b24;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    height: 100%;
+}
+
+.cardContainer .card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(0, 240, 255, 0.4);
+}
+
+.cardIcon {
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.cardDetails h3 {
+    font-size: 15px;
+    color: #ffffff;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.cardDesc {
+    font-size: 12px;
+    color: #8c93a4;
+    line-height: 1.4;
+}
+
+.tech-section {
+    background-color: #12151c;
+    width: 100%;
+    min-height: calc(100vh - 80px);
+    padding: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.tech-section.outsole {
+    background-color: #0f1115;
+}
+
+.section-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.section-content.reverse {
+    flex-direction: row-reverse;
+}
+
+.tech-image-box {
+    flex: 1;
+    height: 400px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.tech-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tech-text-box {
+    flex: 1;
+}
+
+.sub-heading {
+    color: #00f0ff;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.tech-text-box h2 {
+    font-size: 36px;
+    margin: 10px 0 20px 0;
+    color: #ffffff;
+}
+
+.tech-text-box p {
+    color: #a0a5b5;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+@media (max-width: 992px) {
+    .overview .secondContent {
+        flex-direction: column;
+    }
+
+    .overview .secondContent .mainOverview,
+    .overview .secondContent .cardContainer {
+        width: 100%;
+    }
+
+    .overview {
+        height: auto;
+        overflow: visible;
+    }
+
+    .section-content,
+    .section-content.reverse {
+        flex-direction: column;
+    }
+}
